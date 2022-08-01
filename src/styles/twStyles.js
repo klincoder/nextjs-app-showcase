@@ -41,6 +41,34 @@ const tw = {
     "font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary",
   featureCard:
     "bg-white m-10 p-6 rounded-md flex justify-around items-center flex-col hover:shadow-lg cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80",
+
+  // NEW
+  cmsNavIconLeft: "w-3 h-3 mr-3",
+  cmsNavIconRight: "ml-auto",
+
+  btnPrimary:
+    "inline-block px-6 py-3 bg-primary rounded-full text-white text-sm font-semibold leading-tight uppercase shadow-md hover:bg-lightPrimary hover:shadow-lg focus:bg-lightPrimary focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary active:shadow-lg disabled:opacity-60 disabled:pointer-events-none transition duration-150 ease-in-out",
+  btnPrimaryWhite:
+    "inline-block px-6 py-3 bg-white rounded-full text-primary text-sm font-semibold leading-tight uppercase shadow-md hover:bg-lightPrimary hover:shadow-lg focus:bg-lightPrimary focus:shadow-lg focus:outline-none focus:ring-0 active:bg-lightPrimary active:shadow-lg disabled:opacity-60 disabled:pointer-events-none transition duration-150 ease-in-out",
+
+  btnSecondary:
+    "inline-block px-6 py-3 bg-secondary rounded-full text-white text-sm font-semibold leading-tight uppercase shadow-md hover:bg-lightSecondary hover:shadow-lg focus:bg-lightSecondary focus:shadow-lg focus:outline-none focus:ring-0 active:bg-lightSecondary active:shadow-lg disabled:opacity-60 disabled:pointer-events-none transition duration-150 ease-in-out",
+  btnSecondaryWhite:
+    "inline-block px-6 py-3 bg-white rounded-full text-secondary text-sm font-semibold leading-tight uppercase shadow-md hover:bg-lightSecondary hover:shadow-lg focus:bg-lightSecondary focus:shadow-lg focus:outline-none focus:ring-0 active:bg-lightSecondary active:shadow-lg disabled:opacity-60 disabled:pointer-events-none transition duration-150 ease-in-out",
+
+  btnDanger:
+    "inline-block px-6 py-3 bg-danger rounded-full text-white text-sm font-semibold leading-tight uppercase shadow-md hover:bg-lightDanger hover:shadow-lg focus:bg-lightDanger focus:shadow-lg focus:outline-none focus:ring-0 active:bg-lightDanger active:shadow-lg disabled:opacity-60 disabled:pointer-events-none transition duration-150 ease-in-out",
+
+  btnSuccess:
+    "inline-block px-6 py-3 bg-success rounded-full text-white text-sm font-semibold leading-tight uppercase shadow-md hover:bg-lightSuccess hover:shadow-lg focus:bg-lightSuccess focus:shadow-lg focus:outline-none focus:ring-0 active:bg-lightSuccess active:shadow-lg disabled:opacity-60 disabled:pointer-events-none transition duration-150 ease-in-out",
+
+  btnAccent:
+    "inline-block px-6 py-3 bg-accent rounded-full text-white text-sm font-semibold leading-tight uppercase shadow-md hover:bg-lightAccent hover:shadow-lg focus:bg-lightAccent focus:shadow-lg focus:outline-none focus:ring-0 active:bg-lightAccent active:shadow-lg disabled:opacity-60 disabled:pointer-events-none transition duration-150 ease-in-out",
+
+  btnPaginator:
+    "page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none rounded-full text-gray-500 transition-all duration-300 disabled:opacity-60 disabled:pointer-events-none focus:shadow-none",
+
+  aboutStatsIcon: "text-primary w-7 h-7",
 };
 
 // Export

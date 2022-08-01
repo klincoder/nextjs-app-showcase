@@ -8,6 +8,7 @@ import javascript from "../assets/javascript.png";
 import react from "../assets/react.png";
 import scene from "../assets/scene.png";
 import mockup from "../assets/mockup.png";
+import logo from "../assets/logo.png";
 
 // BASE URL
 export const baseUrl =
@@ -51,6 +52,9 @@ export const appImages = {
   react,
   scene,
   mockup,
+  // NEW
+  general: "https://placehold.co/600x400.png",
+  logo,
 };
 
 // APP REGEX
@@ -82,4 +86,25 @@ export const apiRoutes = {
 // ALERT MSG
 export const alertMsg = {
   general: "Internal error. Please contact support.",
+  loginSucc: "Login successful",
+  loginErr: "Invalid credentials",
+  registerSucc: "Account created",
+  otpSendSucc: "We sent your OTP code. Check your inbox or spam.",
+  otpSendErr: "Failed to send OTP. Try again.",
+  otpVerifyErr: "Invalid code",
+  emailExistSucc: "Email address already exist",
+  emailExistErr: "Invalid email address",
+  usernameExistSucc: "Username already exist",
+  usernameExistErr: "Invalid username",
+  isRequiredAll: "All fields are required",
+  passRecoverySucc: "Password recovery successful",
+  passRecoveryErr: "Failed to recover password",
 };
+
+// NAV LINKS
+export const navLinks = [
+  { id: "123", title: "Home", link: "/" },
+  { id: "456", title: "About", link: "/#homeAbout" },
+  { id: "789", title: "Services", link: "/#homeServices" },
+  { id: "1213", title: "Contact", link: "/contact" },
+];

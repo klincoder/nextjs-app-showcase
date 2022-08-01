@@ -4,11 +4,11 @@ import moment from "moment";
 
 // Import custom files
 import tw from "../styles/twStyles";
-import { appImages } from "../config/data";
 import CustomButton from "./CustomButton";
+import { appImages } from "../config/data";
 
 // Component
-export default function Footer() {
+function PageFooter() {
   // Debug
   //console.log("Debug footer: ",)
 
@@ -18,15 +18,15 @@ export default function Footer() {
       <div className={`pt-8 ${tw?.pText} ${tw?.whiteText}`}>
         <div>Copyright &copy; {`${moment().format("YYYY")} KlincoderNFT`}</div>
         <span>Website by </span>
-        <CustomButton
-          isLink
-          href="https://github.com/klincoder"
-          target="_blank"
-          btnClass="bold underline"
-        >
-          Klincoder
+        <CustomButton isLink href="https://github.com/klincoder">
+          <a className="bold underline" target="_blank">
+            Klincoder
+          </a>
         </CustomButton>
       </div>
     </div>
   ); // close return
 } // close component
+
+// Export default
+export default PageFooter;

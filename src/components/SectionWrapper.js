@@ -1,15 +1,14 @@
 // Import resources
 import React from "react";
-import Image from "next/image";
 
 // Import custom files
 import tw from "../styles/twStyles";
-import { appImages } from "../config/data";
 import CustomButton from "./CustomButton";
 import CustomImage from "./CustomImage";
+import { appImages } from "../config/data";
 
 // Component
-export default function SectionWrapper({
+function SectionWrapper({
   title,
   description,
   showBtn,
@@ -43,7 +42,7 @@ export default function SectionWrapper({
             ${reverse ? tw?.textRight : tw?.textLeft}
           `}
         >
-          {/** Title */}
+          {/** TITLE */}
           <h1
             className={`
               ${tw?.h1Text}
@@ -53,7 +52,7 @@ export default function SectionWrapper({
             {title}
           </h1>
 
-          {/** Description */}
+          {/** DESCRIPTION */}
           <p
             className={`
               ${tw?.descriptionText}
@@ -68,29 +67,31 @@ export default function SectionWrapper({
             <CustomButton
               isLink
               href="https://expo.dev/@klincoder/klincoder-nft"
-              target="_blank"
-              btnClass={tw?.btnBlack}
             >
-              {/** Image */}
-              <CustomImage
-                src={appImages?.expo}
-                alt="expo icon"
-                width={30}
-                height={30}
-                imgClass={tw?.btnIcon}
-              />
-              {/** Text */}
-              <div className="flex flex-col justify-start ml-4">
-                <p className={`${tw?.btnText} font-normal text-xs`}>
-                  View it on
-                </p>
-                <p className={`${tw?.btnText} font-bold text-sm`}>Expo Store</p>
-              </div>
+              <a className={tw?.btnBlack} target="_blank">
+                {/** Image */}
+                <CustomImage
+                  src={appImages?.expo}
+                  alt="expo icon"
+                  width={30}
+                  height={30}
+                  imgClass={tw?.btnIcon}
+                />
+                {/** Text */}
+                <div className="flex flex-col justify-start ml-4">
+                  <p className={`${tw?.btnText} font-normal text-xs`}>
+                    View it on
+                  </p>
+                  <p className={`${tw?.btnText} font-bold text-sm`}>
+                    Expo Store
+                  </p>
+                </div>
+              </a>
             </CustomButton>
           )}
         </div>
 
-        {/** Mockup */}
+        {/** IMAGE */}
         <div className={`flex-1 p-8 sm:px-0 ${tw?.flexCenter}`}>
           <CustomImage
             src={mockupImg}
@@ -105,3 +106,6 @@ export default function SectionWrapper({
     </div>
   ); // close return
 } // close component
+
+// Export default
+export default SectionWrapper;

@@ -2,14 +2,12 @@
 import { useRecoilValue } from "recoil";
 
 // Import custom files
-import PageContent from "../src/components/PageContent";
 import tw from "../src/styles/twStyles";
-import { appImages } from "../src/config/data";
+import PageContent from "../src/components/PageContent";
 import SectionWrapper from "../src/components/SectionWrapper";
 import Features from "../src/components/Features";
 import Download from "../src/components/Download";
-import Footer from "../src/components/Footer";
-import CustomButton from "../src/components/CustomButton";
+import { appImages } from "../src/config/data";
 import { allUsersAtom, userAtom } from "../src/recoil/atoms";
 
 // Component
@@ -60,9 +58,6 @@ export default function Home() {
 
       {/** SECTION - DOWNLOAD */}
       <Download />
-
-      {/** SECTION - FOOTER */}
-      {/* <Footer /> */}
     </PageContent>
   ); // close retrn
 } // close component

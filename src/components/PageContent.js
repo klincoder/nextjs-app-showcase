@@ -3,10 +3,9 @@ import React from "react";
 
 // Import custom files
 import tw from "../styles/twStyles";
-import { appImages } from "../config/data";
-import Navbar from "./Navbar";
 import PageMeta from "./PageMeta";
-import Footer from "./Footer";
+import PageHeader from "./PageHeader";
+import PageFooter from "./PageFooter";
 
 // Component
 export default function PageContent({
@@ -15,7 +14,6 @@ export default function PageContent({
   keywords,
   screenshot,
   children,
-  ...rest
 }) {
   // Debug
   //console.log("Debug pageContent: ",)
@@ -33,13 +31,15 @@ export default function PageContent({
       />
 
       {/** Header */}
-      {/* <Navbar /> */}
+      <PageHeader />
 
       {/** Inidividual pages as children */}
       <>{children}</>
 
       {/** Footer */}
-      <Footer />
+      <div className="sticky top-full">
+        <PageFooter />
+      </div>
     </div>
   ); // close return
 } // close component
