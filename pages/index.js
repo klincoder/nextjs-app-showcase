@@ -26,35 +26,36 @@ export default function Home() {
         showBtn
         title="The best app headline goes here. Make it simple & catchy."
         image={appImages?.homeHero}
-        bannerClass="banner"
         description="Give a brief explanation of the main benefits of using your app. Lore ipsum lorep ipsum lorep ipsum lorep ipsum lorep."
       />
 
-      {/** SECTION - BENEFITS */}
+      {/** SECTION - FEATURES */}
+      <SectionFeatures id="homeFeatures" />
+
+      {/** SECTION - ABOUT US */}
       <SectionWrapper
-        isReverse
-        title="App Benefit 1"
+        id="homeAboutUs"
+        title="About Us"
         image={appImages?.homeCards}
+        bannerClass="bg-secondary"
+        titleClass="!text-white"
+        descClass="!text-gray-50"
         description="Lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum."
       />
 
-      {/** SECTION - FEATURES */}
-      <SectionFeatures />
-
-      {/** SECTION - DEPLOYMENT */}
+      {/** SECTION - BENEFIT 1 */}
       <SectionWrapper
         isReverse
-        title="Deploy Everywhere"
+        title="Benefit 1"
         image={appImages?.feature}
-        description="KlincoderNFT is powered by Expo-CLI which runs natively on Android & iOS devices for your users. You can quickly get your app into their hands."
+        description="Lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum."
       />
 
-      {/** SECTION - CREATIVE SHOWCASE */}
+      {/** SECTION - BENEFIT 2 */}
       <SectionWrapper
-        title="A creative way to showcase your NFTs"
+        title="Benefit 2"
         image={appImages?.mockup}
-        bannerClass="banner02"
-        description="The app contains two screens. The first screen lists all your NFTs while the second one shows the details of a specifc NFT and bids."
+        description="Lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum."
       />
 
       {/** SECTION - CTA */}

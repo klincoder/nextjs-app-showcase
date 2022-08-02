@@ -8,19 +8,19 @@ import CustomImage from "./CustomImage";
 import { appImages } from "../config/data";
 
 // Component
-function SectionCta() {
+function SectionCta({ ...rest }) {
   // Debug
   //console.log("Debug sectionCta: ",)
 
   // Return component
   return (
-    <section className={`${tw?.section} ${tw?.bgWhite}`}>
+    <section {...rest} className={`${tw?.section} bg-primary`}>
       {/** MAIN CONTAINER */}
-      <div className={`${tw?.subSection} flex-col text-center`}>
+      <div className={`${tw?.subSection} flex-col text-center py-14`}>
         {/** Header */}
-        <div>
-          <h1 className={`${tw?.h1Text} ${tw?.blackText}`}>Download App</h1>
-          <p className={`${tw?.pText} ${tw?.blackText}`}>
+        <div className="mb-6">
+          <h1 className={`${tw?.h1Text} !text-white`}>Download App</h1>
+          <p className={`${tw?.pText} !text-white`}>
             Available for Android & iOS devices
           </p>
         </div>
@@ -29,13 +29,13 @@ function SectionCta() {
         <div className="flex gap-3">
           {/** Android */}
           <CustomButton isLink href="/#">
-            <a className={tw?.btnPrimary} target="_blank">
+            <a className={tw?.btnSecondary} target="_blank">
               Android
             </a>
           </CustomButton>
           {/** iOS */}
           <CustomButton isLink href="/#">
-            <a className={tw?.btnPrimary} target="_blank">
+            <a className={tw?.btnSecondary} target="_blank">
               iOS
             </a>
           </CustomButton>

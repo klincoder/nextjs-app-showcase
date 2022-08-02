@@ -13,7 +13,7 @@ function FeaturesItem({ title, description, image, ...rest }) {
 
   // Return component
   return (
-    <div className="bg-white p-6 mb-12 rounded-xl lg:mb-0">
+    <div className="bg-white p-6 mb-12 rounded-xl shadow-lg lg:mb-0">
       {/* <div className="inline-block bg-primary p-2 mb-6 rounded-full shadow-lg"> */}
       {/** Image */}
       <CustomImage

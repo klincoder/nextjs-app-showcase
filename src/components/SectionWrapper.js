@@ -15,6 +15,9 @@ function SectionWrapper({
   description,
   showBtn,
   bannerClass,
+  titleClass,
+  descClass,
+  ...rest
 }) {
   // Debug
   //console.log("Debug sectionWrapper: ",)
@@ -22,9 +25,10 @@ function SectionWrapper({
   // Return component
   return (
     <section
+      {...rest}
       className={`
         min-h-screen flex justify-center items-center p-16 sm:p-8
-        ${isReverse ? "bg-white" : "bg-primary"} 
+        ${isReverse ? "bg-gray-50" : "bg-white"} 
         ${bannerClass}
       `}
     >
@@ -44,31 +48,14 @@ function SectionWrapper({
           `}
         >
           {/** Title */}
-          <h1
-            className={`
-              ${tw?.h1Text}
-              ${isReverse ? "text-black" : "text-white"}
-            `}
-          >
-            {title}
-          </h1>
+          <h1 className={`${tw?.h1Text} ${titleClass}`}>{title}</h1>
 
           {/** Description */}
-          <p
-            className={`
-              ${tw?.descText}
-              ${isReverse ? "text-black" : "text-white"}
-            `}
-          >
-            {description}
-          </p>
+          <p className={`${tw?.descText} ${descClass}`}> {description}</p>
 
           {/** Button */}
           {showBtn && (
-            <CustomButton
-              isLink
-              href="https://expo.dev/@klincoder/klincoder-nft"
-            >
+            <CustomButton isLink href="https://expo.dev/@klincoder">
               <a className={tw?.btnBlack} target="_blank">
                 {/** Image */}
                 <CustomImage
@@ -81,7 +68,7 @@ function SectionWrapper({
                 {/** Text */}
                 <div className="flex flex-col justify-start ml-4">
                   <p className={`${tw?.btnText} font-normal text-xs`}>
-                    View it on
+                    Download on
                   </p>
                   <p className={`${tw?.btnText} font-bold text-sm`}>
                     Expo Store

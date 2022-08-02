@@ -7,25 +7,23 @@ import FeaturesItem from "./FeaturesItem";
 import { appFeaturesList, appImages } from "../config/data";
 
 // Component
-function SectionFeatures() {
+function SectionFeatures({ ...rest }) {
   // Debug
   //console.log("Debug sectionFeatures: ",)
 
   // Return component
   return (
-    <section className={`${tw?.section} bg-primary banner03`}>
+    <section {...rest} className={`${tw?.section} bg-gray-50`}>
       {/** MAIN CONTAINER */}
-      <div className={`${tw?.subSection} flex-col text-center`}>
+      <div className={`${tw?.subSection} flex-col text-center py-14`}>
         {/** Header */}
-        <div>
-          <h1 className={`${tw?.h1Text} ${tw?.whiteText}`}>Features</h1>
-          <p className={`${tw?.pText} ${tw?.whiteText}`}>
-            Amazing solution-based app features
-          </p>
+        <div className="mb-6">
+          <h1 className={`${tw?.h1Text}`}>Features</h1>
+          <p className={`${tw?.pText}`}>Amazing solution-based app features</p>
         </div>
 
         {/** Features */}
-        <div className="grid grid-cols-3 md:gap-x-12">
+        <div className="grid md:grid-cols-3 md:gap-x-12">
           {/** Loop appFeaturesList */}
           {appFeaturesList?.length > 0 &&
             appFeaturesList?.map((item) => (

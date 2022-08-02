@@ -4,15 +4,12 @@ const tw = {
   boxReverseClass: "flex-row-reverse mdMax:flex-col-reverse",
 
   h1Text:
-    "font-bold font-IBMPlex text-5xl sm:text-4xl mdMin:text-6xl lgMin:text-8xl leading-12 mdMin:leading-13",
+    "text-5xl text-gray-800 font-bold leading-12 sm:text-4xl mdMin:text-6xl lgMin:text-8xl mdMin:leading-13",
   pText:
-    "my-5 mdMin:my-10 font-IBMPlex font-light text-xl mdMin:text-3xl lgMin:text-4xl mdMin:leading-16",
+    "text-xl text-gray-600 my-5 font-light mdMin:my-10 mdMin:text-3xl lgMin:text-4xl mdMin:leading-16",
   descText:
-    "my-5 mdMin:my-10 font-IBMPlex font-light text-xl mdMin:text-3xl lgMin:text-4xl mdMin:leading-16",
-  btnText: "text-white font-IBMPlex mdMin:text-lg",
-
-  btnPrimary:
-    "bg-primary mt-4 py-4 px-6 text-white text-lg mdMin:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl",
+    "text-xl text-gray-600 my-5 font-light mdMin:my-10 mdMin:text-3xl mdMin:leading-16 lgMin:text-4xl",
+  btnText: "text-white mdMin:text-lg",
   btnBlack:
     "bg-black flex items-center py-2 px-4 rounded-md mt-2 w-fit cursor-pointer",
 
@@ -24,11 +21,11 @@ const tw = {
   flexWrap: "flex justify-center flex-wrap",
 
   fullImg: "w-full h-full object-cover",
-  sectionImg: "w-full h-full mdMin:w-11/12 mdMin:h-11/12 object-contain",
+  sectionImg: "w-full h-full object-contain mdMin:w-11/12 mdMin:h-11/12",
   btnIcon: "w-5 h-5 md:min-w-10 md:min-h-10 object-contain",
 
   featureImg: "w-20 h-20 mb-3 object-contain rounded-full",
-  featureText: "text-base text-gray-800 font-semibold  lgMin:text-3xl",
+  featureText: "text-base text-gray-800 font-semibold lgMin:text-3xl",
   featureCard:
     "flex flex-col justify-around items-center bg-white m-10 p-6 w-100 h-100 rounded-md hover:shadow-lg",
 

@@ -129,3 +129,10 @@ export const appFeaturesList = [
     image: appImages?.react,
   },
 ];
+
+// COPYRIGHT LINKS
+export const copyrightLinks = [
+  { id: "123", title: "FAQs", link: "/faqs" },
+  { id: "456", title: "Privacy", link: "/privacy" },
+  { id: "789", title: "Terms", link: "/terms" },
+];
