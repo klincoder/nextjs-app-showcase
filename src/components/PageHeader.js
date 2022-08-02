@@ -34,7 +34,7 @@ function PageHeader() {
 
   // Return component
   return (
-    <nav className="relative container mx-auto p-6 border-b border-gray-200">
+    <nav className="relative container mx-auto px-6 py-3 border-b border-gray-200">
       {/** Links container */}
       <div className="flex items-center justify-between">
         {/** Logo */}
@@ -44,8 +44,8 @@ function PageHeader() {
               <CustomImage
                 image={appImages?.logo}
                 alt="logo"
-                // width={250}
-                // height={50}
+                width={50}
+                height={50}
               />
             </a>
           </CustomButton>
@@ -91,7 +91,7 @@ function PageHeader() {
           isNormal
           id="toggleBtn"
           onClick={handleToggleMenu}
-          btnClass={`block hamburger pb-2 md:hidden focus:outline-none`}
+          btnClass={`block hamburger pb-2 lg:hidden focus:outline-none`}
         >
           {/** If toggle menu */}
           {toggleMenu ? (
@@ -104,44 +104,38 @@ function PageHeader() {
 
       {/** Links - small screen */}
       {toggleMenu && (
-        <div className="md:hidden">
-          <div
-            id="menuLinksMobile"
-            className="absolute flex flex-col items-center self-end py-8 mt-6 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
-          >
-            {/** Loop navLinks */}
-            {navLinks?.length > 0 &&
-              navLinks?.map((item) => (
-                <CustomButton isLink key={item?.id} href={item?.link}>
-                  <a
-                    className={` hover:text-primary 
+        <div
+          id="navLinksSmallScreen"
+          className="absolute left-6 right-6 z-50 flex flex-col items-center self-end py-8 mt-6 space-y-6 font-bold bg-white drop-shadow-md sm:w-auto sm:self-center md:hidden"
+        >
+          {/** Loop navLinks */}
+          {navLinks?.length > 0 &&
+            navLinks?.map((item) => (
+              <CustomButton isLink key={item?.id} href={item?.link}>
+                <a
+                  className={` hover:text-primary 
                     ${router.pathname === item?.link ? "text-primary" : ""}
                     ${item?.isBlog && isBlogSlug && "text-primary"}
                   `}
-                  >
-                    {item?.title}
-                  </a>
-                </CustomButton>
-              ))}
-            {/** Buttons */}
-            {/** if !userID */}
-            {!userID && (
-              <div className="w-full text-center px-4">
-                {/** Login button */}
-                <CustomButton isLink id="loginBtnSmallScreen" href="/login">
-                  <a className={`w-full my-3 ${tw?.btnPrimary}`}>Login</a>
-                </CustomButton>
-                {/** Register button */}
-                <CustomButton
-                  isLink
-                  id="registerBtnSmallScreen"
-                  href="/register"
                 >
-                  <a className={`w-full ${tw?.btnSecondary}`}>Register</a>
-                </CustomButton>
-              </div>
-            )}
-          </div>
+                  {item?.title}
+                </a>
+              </CustomButton>
+            ))}
+          {/** Buttons */}
+          {/** if !userID */}
+          {!userID && (
+            <div className="w-full text-center px-4">
+              {/** Login button */}
+              <CustomButton isLink id="loginBtnSmallScreen" href="/login">
+                <a className={`w-full my-3 ${tw?.btnPrimary}`}>Login</a>
+              </CustomButton>
+              {/** Register button */}
+              <CustomButton isLink id="registerBtnSmallScreen" href="/register">
+                <a className={`w-full ${tw?.btnSecondary}`}>Register</a>
+              </CustomButton>
+            </div>
+          )}
         </div>
       )}
     </nav>

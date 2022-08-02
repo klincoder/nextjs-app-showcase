@@ -14,7 +14,8 @@ function PageFooter() {
 
   // Return component
   return (
-    <div className="px-4 py-2 justify-center items-center bg-primary flex-col text-center banner04">
+    <footer className="px-4 py-2 justify-center items-center bg-primary flex-col text-center banner04">
+      {/** COPYRIGHT */}
       <div className={`pt-8 ${tw?.pText} ${tw?.whiteText}`}>
         <div>Copyright &copy; {`${moment().format("YYYY")} KlincoderNFT`}</div>
         <span>Website by </span>
@@ -24,7 +25,7 @@ function PageFooter() {
           </a>
         </CustomButton>
       </div>
-    </div>
+    </footer>
   ); // close return
 } // close component
 

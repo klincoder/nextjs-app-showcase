@@ -57,7 +57,7 @@ export default function MyApp({
             <Component {...pageProps} />
 
             {/** Scroll up button */}
-            {/* <ScrollUpButton /> */}
+            <ScrollUpButton />
           </SessionProvider>
         </AlertProvider>
       </RecoilRoot>

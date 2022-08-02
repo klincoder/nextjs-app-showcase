@@ -52,7 +52,6 @@ export const appImages = {
   react,
   scene,
   mockup,
-  // NEW
   general: "https://placehold.co/600x400.png",
   logo,
 };
@@ -107,4 +106,26 @@ export const navLinks = [
   { id: "456", title: "About", link: "/#homeAbout" },
   { id: "789", title: "Services", link: "/#homeServices" },
   { id: "1213", title: "Contact", link: "/contact" },
+];
+
+// APP FEATURES LIST
+export const appFeaturesList = [
+  {
+    id: "123",
+    title: "Feature 1",
+    desc: "Lorep ipsum lorep ispum lorep ispum lorep ispum lorep ispum lorep ispum.",
+    image: appImages?.react,
+  },
+  {
+    id: "456",
+    title: "Feature 2",
+    desc: "Lorep ipsum lorep ispum lorep ispum lorep ispum lorep ispum lorep ispum.",
+    image: appImages?.react,
+  },
+  {
+    id: "789",
+    title: "Feature 3",
+    desc: "Lorep ipsum lorep ispum lorep ispum lorep ispum lorep ispum lorep ispum.",
+    image: appImages?.react,
+  },
 ];

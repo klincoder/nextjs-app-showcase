@@ -3,10 +3,9 @@ import React from "react";
 
 // Import custom files
 import tw from "../styles/twStyles";
-import { appImages } from "../config/data";
 
 // Component
-export default function BlankComponent() {
+function BlankComponent() {
   // Debug
   //console.log("Debug blankComponent: ",)
 
@@ -17,3 +16,6 @@ export default function BlankComponent() {
     </div>
   ); // close return
 } // close component
+
+// Export
+export default BlankComponent;

@@ -8,13 +8,7 @@ import useAppSettings from "../hooks/useAppSettings";
 import { baseUrl } from "../config/data";
 
 // Component
-export default function PageMeta({
-  isNormal,
-  title,
-  description,
-  keywords,
-  screenshot,
-}) {
+function PageMeta({ isNormal, title, description, keywords, screenshot }) {
   // Define router
   const router = useRouter();
 
@@ -77,3 +71,6 @@ export default function PageMeta({
     </Head>
   ); // close return
 } // close component
+
+// Export
+export default PageMeta;

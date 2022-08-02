@@ -1,48 +1,37 @@
 // TW STYLES
 const tw = {
-  whiteText: "text-white",
-  blackText: "text-tertiary",
-
-  bgWhite: "bg-white",
-  bgPrimary: "bg-primary",
-
-  boxClass: "flex-row md:flex-col",
-  boxReverseClass: "flex-row-reverse md:flex-col-reverse",
-
-  textLeft: "text-left",
-  textRight: "text-right",
+  boxClass: "flex-row mdMax:flex-col",
+  boxReverseClass: "flex-row-reverse mdMax:flex-col-reverse",
 
   h1Text:
-    "font-bold font-IBMPlex text-5xl sm:text-4xl minmd:text-6xl minlg:text-8xl leading-12 minmd:leading-13",
+    "font-bold font-IBMPlex text-5xl sm:text-4xl mdMin:text-6xl lgMin:text-8xl leading-12 mdMin:leading-13",
   pText:
-    "my-5 minmd:my-10 font-IBMPlex font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16",
-  descriptionText:
-    "my-5 minmd:my-10 font-IBMPlex font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16",
-  btnText: "text-white font-IBMPlex minmd:text-lg",
+    "my-5 mdMin:my-10 font-IBMPlex font-light text-xl mdMin:text-3xl lgMin:text-4xl mdMin:leading-16",
+  descText:
+    "my-5 mdMin:my-10 font-IBMPlex font-light text-xl mdMin:text-3xl lgMin:text-4xl mdMin:leading-16",
+  btnText: "text-white font-IBMPlex mdMin:text-lg",
 
   btnPrimary:
-    "bg-primary mt-4 py-4 px-6 text-white text-lg minmd:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl",
+    "bg-primary mt-4 py-4 px-6 text-white text-lg mdMin:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl",
   btnBlack:
     "bg-black flex items-center py-2 px-4 rounded-md mt-2 w-fit cursor-pointer",
 
   section: "flex justify-center items-center p-16 sm:p-8",
-  subSection: "flex items-center w-full minmd:w-3/4",
+  subSection: "flex items-center w-full mdMin:w-3/4",
   descDiv: "flex-1 w-full flex justify-start flex-col md:mb-10 ",
 
   flexCenter: "flex justify-center items-center",
   flexWrap: "flex justify-center flex-wrap",
 
   fullImg: "w-full h-full object-cover",
-  sectionImg: "w-full h-full minmd:w-11/12 minmd:h-11/12 object-contain",
+  sectionImg: "w-full h-full mdMin:w-11/12 mdMin:h-11/12 object-contain",
   btnIcon: "w-5 h-5 md:min-w-10 md:min-h-10 object-contain",
 
-  featureImg: "w-20 h-20 minlg:w-40 minlg:h-40 object-contain mb-1",
-  featureText:
-    "font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary",
+  featureImg: "w-20 h-20 mb-3 object-contain rounded-full",
+  featureText: "text-base text-gray-800 font-semibold  lgMin:text-3xl",
   featureCard:
-    "bg-white m-10 p-6 rounded-md flex justify-around items-center flex-col hover:shadow-lg cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80",
+    "flex flex-col justify-around items-center bg-white m-10 p-6 w-100 h-100 rounded-md hover:shadow-lg",
 
-  // NEW
   cmsNavIconLeft: "w-3 h-3 mr-3",
   cmsNavIconRight: "ml-auto",
 

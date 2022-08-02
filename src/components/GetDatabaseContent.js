@@ -17,7 +17,7 @@ import {
 } from "../config/firebase";
 
 // Component
-export default function GetDatabaseContent() {
+function GetDatabaseContent() {
   // Define isMounted
   const isMounted = useRef(null);
 
@@ -42,11 +42,8 @@ export default function GetDatabaseContent() {
     (() => {
       // If currUserID
       if (currUserID) {
-        //setUserAtom(session?.data?.user);
         const currUserRef = doc(fireDB, "users", `${currUserID}`);
-        // Snapshot
         onSnapshot(currUserRef, (snapshot) => {
-          // Set atom
           setUserAtom(snapshot.data());
         });
       } else {
@@ -78,9 +75,7 @@ export default function GetDatabaseContent() {
     isMounted.current = true;
     // LISTEN TO APP SETTINGS
     const appSettingsRef = collection(fireDB, "appSettings");
-    // Snapshot
     onSnapshot(appSettingsRef, (snapshot) => {
-      // Set atom
       setAppSettingsAtom(
         snapshot.docs.map((doc) => {
           return { id: doc.id, data: doc.data() };
@@ -90,9 +85,7 @@ export default function GetDatabaseContent() {
 
     // LISTEN TO ALL USERS
     const allUsersRef = collection(fireDB, "users");
-    // Snapshot
     onSnapshot(allUsersRef, (snapshot) => {
-      // Set atom
       setAllUsersAtom(
         snapshot.docs.map((doc) => {
           return doc.data();
@@ -109,3 +102,6 @@ export default function GetDatabaseContent() {
   // Return component
   return null;
 } // close component
+
+// Export
+export default GetDatabaseContent;

@@ -9,60 +9,61 @@ import { appImages } from "../config/data";
 
 // Component
 function SectionWrapper({
+  isReverse,
   title,
+  image,
   description,
   showBtn,
-  mockupImg,
-  banner,
-  reverse,
+  bannerClass,
 }) {
   // Debug
   //console.log("Debug sectionWrapper: ",)
 
   // Return component
   return (
-    <div
+    <section
       className={`
-        min-h-screen 
-        ${tw?.section} 
-        ${reverse ? tw?.bgWhite : tw?.bgPrimary} 
-        ${banner}
+        min-h-screen flex justify-center items-center p-16 sm:p-8
+        ${isReverse ? "bg-white" : "bg-primary"} 
+        ${bannerClass}
       `}
     >
+      {/** MAIN CONTAINER */}
       <div
         className={`
           flex items-center 
-          ${reverse ? tw?.boxReverseClass : tw?.boxClass}
+          ${isReverse ? tw?.boxReverseClass : tw?.boxClass}
         `}
       >
+        {/** LEFT CONTAINER */}
         <div
           className={`
             ${tw?.descDiv}
-            ${reverse ? " fadeRightMini" : " fadeLeftMini"}
-            ${reverse ? tw?.textRight : tw?.textLeft}
+            ${isReverse ? " fadeRightMini" : " fadeLeftMini"}
+            ${isReverse ? "text-right" : "text-left"}
           `}
         >
-          {/** TITLE */}
+          {/** Title */}
           <h1
             className={`
               ${tw?.h1Text}
-              ${reverse ? tw?.blackText : tw?.whiteText}
+              ${isReverse ? "text-black" : "text-white"}
             `}
           >
             {title}
           </h1>
 
-          {/** DESCRIPTION */}
+          {/** Description */}
           <p
             className={`
-              ${tw?.descriptionText}
-              ${reverse ? tw?.blackText : tw?.whiteText}
+              ${tw?.descText}
+              ${isReverse ? "text-black" : "text-white"}
             `}
           >
             {description}
           </p>
 
-          {/** If show button - imgUrl={appImages?.expo} link="" */}
+          {/** Button */}
           {showBtn && (
             <CustomButton
               isLink
@@ -91,19 +92,20 @@ function SectionWrapper({
           )}
         </div>
 
-        {/** IMAGE */}
+        {/** RIGHT CONTAINER*/}
         <div className={`flex-1 p-8 sm:px-0 ${tw?.flexCenter}`}>
+          {/** Image */}
           <CustomImage
-            src={mockupImg}
+            src={image}
             alt="mockup"
             imgClass={`
               ${tw?.sectionImg}
-              ${reverse ? " fadeRightMini" : " fadeLeftMini"}
+              ${isReverse ? " fadeRightMini" : " fadeLeftMini"}
             `}
           />
         </div>
       </div>
-    </div>
+    </section>
   ); // close return
 } // close component
 

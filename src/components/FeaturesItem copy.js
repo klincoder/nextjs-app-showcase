@@ -13,23 +13,21 @@ function FeaturesItem({ title, description, image, ...rest }) {
 
   // Return component
   return (
-    <div className="bg-white p-6 mb-12 rounded-xl lg:mb-0">
-      {/* <div className="inline-block bg-primary p-2 mb-6 rounded-full shadow-lg"> */}
+    <div className={tw?.featureCard}>
       {/** Image */}
       <CustomImage
         src={image}
         alt={title}
-        width={60}
-        height={60}
-        imgClass="shadow-lg rounded-full"
+        imgClass={tw?.featureImg}
+        width={100}
+        height={100}
       />
-      {/* </div> */}
 
       {/** Title */}
-      <h5 className="text-lg font-bold mb-4">{title}</h5>
+      <h3 className={tw?.featureText}>{title}</h3>
 
       {/** Description */}
-      <p className="text-gray-500">{description}</p>
+      <p className="text-sm">{description}</p>
     </div>
   ); // close return
 } // close component

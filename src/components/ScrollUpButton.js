@@ -1,20 +1,22 @@
 // Import resources
 import React, { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import { appColors } from "../config/data";
 
 // Import custom files
 import CustomButton from "./CustomButton";
 
 // Component
-export default function ScrollUpButton() {
+function ScrollUpButton() {
   // Define state for button visibility
   const [isVisible, setIsVisible] = useState(false);
 
+  // Debug
+  // console.log("Debug scrollUpBtn: ", isVisible);
+
   // FUNCTIONS
-  // HANDLE TOGGLE VISIBILITY
-  const handleToggleVisibility = () => {
-    // If window vertical offset
+  // HANDLE BUTTON VISIBILITY
+  const handleBtnVisibility = () => {
+    // If window page y-azis offset
     if (window.pageYOffset > 300) {
       setIsVisible(true);
     } else {
@@ -24,9 +26,11 @@ export default function ScrollUpButton() {
 
   // HANDLE SCROLL UP
   const handleScrollUp = () => {
+    // Set the top cordinate to 0
+    // Make scrolling smooth
     window.scrollTo({
-      top: 0, // Set the top cordinate to 0
-      behavior: "smooth", // Make scrolling smooth
+      top: 0,
+      behavior: "smooth",
     });
   }; // close fxn
 
@@ -34,20 +38,20 @@ export default function ScrollUpButton() {
   // LISTEN TO SCROLL EVENT
   useEffect(() => {
     // Listen to page scroll
-    window.addEventListener("scroll", handleToggleVisibility);
+    window.addEventListener("scroll", handleBtnVisibility);
     // Clean up
-    return () => window.removeEventListener("scroll", handleToggleVisibility);
+    return () => window.removeEventListener("scroll", handleBtnVisibility);
   }, []);
 
   // Return component
   return (
     <>
-      {/** If isVisible */}
       {isVisible && (
         <CustomButton
           isNormal
+          id="scrollUpBtn"
           onClick={handleScrollUp}
-          btnClass={`fixed z-100 w-50 h-50 rounded-full bottom-100 right-10 bg-[${appColors?.primary}]`}
+          btnClass="bottom-5 right-5 fixed p-4 bg-primary text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-lightPrimary hover:shadow-lg focus:bg-lightPrimary focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary active:shadow-lg transition duration-150 ease-in-out"
         >
           <FaArrowUp />
         </CustomButton>
@@ -55,3 +59,6 @@ export default function ScrollUpButton() {
     </>
   ); // close return
 } // close component
+
+// Export
+export default ScrollUpButton;
